@@ -1,38 +1,33 @@
-
-
-// info slider effect in mobile view
-const prevBtn = document.querySelector("#prev");
-const nextBtn = document.querySelector("#next");
-const serviceItems = document.querySelectorAll(".service-items");
-const circles = document.querySelectorAll(".circles");
-
-let counter = 0;
-
-
-nextBtn.addEventListener("click", () => {
-    counter++;
-    update();
-});
-
-prevBtn.addEventListener("click", () => {
+const circles = document.querySelectorAll('.circles');
+const services = document.querySelector('.services');
+let counter =0;
+document.querySelector('#prev').addEventListener('click', function () {
     counter--;
-    update();
-});
-
-
-
-function update() {
-    if (!serviceItems) return; // Return if serviceItems is not defined yet
-    if (counter >= serviceItems.length) {
-        counter = 0;
-    } else if (counter < 0) {
-        counter = serviceItems.length - 1;
+    if (counter < 0) {
+        counter = 2;
     }
-    serviceItems.forEach((item, index) => {
-        let translateY = (counter - index) * 100;
-        item.style.transform = `translateY(${translateY}%)`;
-    });
-    // circles.forEach(circle => circle.classList.toggle("active"));
+    services.children[counter].scrollIntoView({behavior: 'smooth', block: "nearest" });
+    updateActive();
+})
 
-}
-// ========================================== later try
+document.querySelector('#next').addEventListener('click', function () {
+    counter++;
+    if (counter > 2) {
+        counter = 0;
+    }
+    services.children[counter].scrollIntoView({behavior: 'smooth', block: "nearest" });
+    updateActive(); 
+})
+
+function updateActive() {
+    circles.forEach((circle, idx) => {
+        if (idx === counter) {
+            circle.classList.add("active");
+        } else {
+            circle.classList.remove("active");
+        }
+    });
+};
+
+
+
