@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <!-- info section start -->
     <div class="info">
         <!-- info title -->
         <div class="info-title">
             <h3>Flower shop <span class="underline">Malliflow</span></h3>
-            <p><span class="color-1">Malliflow</span> is a loyal flower delivery friend You can order delivery or personally choose a bouquet in our store. A huge selection of flowers and gifts. </p>
+            <p><span class="color-1">Malliflow</span> is a loyal flower delivery friend You can order delivery or
+                personally choose a bouquet in our store. A huge selection of flowers and gifts. </p>
         </div>
         <!-- info title end -->
 
@@ -57,7 +62,7 @@
                 <span id="discount-bold">Get 5% DISCOUNT</span> on your first purchase
             </h3>
             <div class="phone-input">
-                <input type="number"   pattern="[0-9]*"  class="input-disNumber" placeholder="Phone number">
+                <input type="number" pattern="^+[0-9]*" class="input-disNumber" placeholder="Phone number">
                 <button class="dis-btn ">
                     Get a discount
                 </button>
@@ -65,13 +70,14 @@
             </div>
             <div class="discount-icons">
                 <!-- twitter icon -->
-                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-twitter" style="color: rgb(0, 115, 255)"></i>
                 <!-- facebook icon -->
-                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-facebook" style="color: rgb(0, 153, 255)"></i>
                 <!-- whatsapp icon -->
-                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-whatsapp" style="color: rgb(0, 255, 26)"></i>
                 <!-- messenger icon -->
-                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-instagram insta"
+                    style="color:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);"></i>
             </div>
             <p class="reminder">
                 *By clicking on the button, you consent to the processing of your personal data
@@ -80,7 +86,99 @@
 
     </div>
     <!-- discount card end -->
+    <!-- bouquet catalog start -->
+    <div class="bouquet">
+        <h2 class="bouquet-title">Bouquet catalog</h2>
+        <div class="filter">
+            <ul>
+                <li>In stock</li>
+                <li>Designer bouquets</li>
+                <li>Mono bouquets</li>
+                <li>Bouquets of dried flowers</li>
+                <li>Wedding bouquets</li>
+                <li>Bouquets in boxes</li>
+                <li>Sweet bouquets</li>
+                <li>Bouquets of soap flowers</li>
+                <li>Boxes of soap flowers</li>
+            </ul>
+            <div class="price-controller">
+                <h3>Price</h3>
+                <div class="price-range">
+                    <div class="price-range">
+                        <div class="range-slider">
+                            <input type="range" min="0" max="100" value="20" class="range" id="range1">
+                            <input type="range" min="0" max="100" value="80" class="range" id="range2">
+                            <input type="range" min="0" max="100" value="50" class="range" id="range3">
+                        </div>
+                        <div class="range-display">
+                            <span class="range-value" id="range1-display"></span>
+                            <span class="range-value" id="range2-display"></span>
+                            <span class="range-value" id="range3-display"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-dropdown">
+                <div class="dropdown scheme-dr">
+                    <button class="dropdown-button ">Color Scheme</button>
+                    <div class="dropdown-content">
+                        <label class="radio-button"  for="fl-1">Roses</label>
+                        <input type="radio" name="color-scheme"  id="fl-1" value="roses">
+                        
+                        <label class="radio-button" for="fl-2">Peonies</label>
+                        <input type="radio" name="color-scheme" id="fl-2" value="peonies">
+                        
+                        <label class="radio-button" for="fl-3">Daises</label>
+                        <input type="radio" name="color-scheme" id="fl-3" value="daises">
+                        
+                        <label class="radio-button" for="fl-4">Dried Flowers</label>
+                        <input type="radio" name="color-scheme" id="fl-4" value="dried-flowers">
+                        
+                        <label class="radio-button" for="fl-5">Hydrangeas</label>
+                        <input type="radio" name="color-scheme" id="fl-5" value="hydrangeas">
+                        
+                        <label class="radio-button" for="fl-6">Wild Flowers</label>
+                        <input type="radio" name="color-scheme" id="fl-6" value="wild-flowers">
+                    </div>
+                </div>
+
+                <div class="dropdown size-dr">
+                    <button class="dropdown-button ">Size</button>
+                    <div class="dropdown-content">
+                        <label class="radio-button" for="size1">S</label>
+                        <input type="radio" name="size" id="size1" value="S">
+                        <label class="radio-button" for="size2">M</label>
+                        <input type="radio" name="size" id="size2" value="M">
+                        <label class="radio-button" for="size3">L</label><input type="radio" name="size" id="size3"
+                            value="L">
+                        <label class="radio-button" for="size4">XL</label><input type="radio" name="size" id="size4"
+                            value="XL">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="items-bouquet">
+            <div class="bouquet-cards">
+
+            </div>
+            <div class="bouquet-btns">
+                <button id="prev" class="prev-bouquet">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <span class="circles active"></span>
+                <span class="circles"></span>
+                <span class="circles"></span>
+                <button id="next" class=" next-bouquet">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- bouquet catalog end  -->
     <!-- script -->
     <script src="app.js"></script>
 </body>
+
 </html>

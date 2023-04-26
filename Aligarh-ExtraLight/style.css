@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Aligarh';
+    src: local('Aligarh Extra Light'), local('Aligarh-Extra-Light'),
+        url('Aligarh-ExtraLight.woff2') format('woff2'),
+        url('Aligarh-ExtraLight.woff') format('woff'),
+        url('Aligarh-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+  }
