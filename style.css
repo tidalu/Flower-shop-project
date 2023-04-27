@@ -599,6 +599,14 @@ input[type=number] {
     align-items: center;
     flex-wrap: wrap;
     gap: 2%;
+    overflow: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.bouquet-cards::-webkit-scrollbar {
+    display: none;
 }
 .bouquet-card {
     margin-top: 10px;
@@ -609,14 +617,14 @@ input[type=number] {
     justify-content: center;    
     align-items: flex-start;
     font-family: 'Poppins', sans-serif;
-    color: rgb(40, 244, 54);
+    color: rgb(195, 181, 181);
 }
 .currency {
     font-size: 13px;
 }
 .bouquet-card .bouquet-img{
     border-radius: 10px;  
-    width: 100%;  
+    width: 100%; 
     
 }
 
@@ -651,7 +659,22 @@ input[type=number] {
     justify-content: center;
     align-items: center;
     gap: 3px;
+    
 }
+
+.bouquet-btns button{
+    cursor: pointer;
+}
+
+.cart-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+
+}
+
 /* item bouquet section end */
 
 /* bouquet section end */

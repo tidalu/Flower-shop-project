@@ -90,16 +90,16 @@
     <div class="bouquet">
         <h2 class="bouquet-title">Bouquet catalog</h2>
         <div class="filter">
-            <ul>
-                <li>In stock</li>
-                <li>Designer bouquets</li>
-                <li>Mono bouquets</li>
-                <li>Bouquets of dried flowers</li>
-                <li>Wedding bouquets</li>
-                <li>Bouquets in boxes</li>
-                <li>Sweet bouquets</li>
-                <li>Bouquets of soap flowers</li>
-                <li>Boxes of soap flowers</li>
+            <ul class="list">
+                <li><a href="#"> stock</a></li>
+                <li><a href="#">Designer bouquets</a></li>
+                <li><a href="#">Mono bouquets</a></li>
+                <li><a href="#">Bouquets of dried flowers</a></li>
+                <li><a href="#">Wedding bouquets</a></li>
+                <li><a href="#">Bouquets in boxes</a></li>
+                <li><a href="#">Sweet bouquets</a></li>
+                <li><a href="#">Bouquets of soap flowers</a></li>
+                <li><a href="#">Boxes of soap flowers</a></li>
             </ul>
             <div class="price-controller">
                 <h3>Price</h3>
@@ -107,12 +107,10 @@
                     <div class="price-range">
                         <div class="range-slider">
                             <input type="range" min="0" max="100" value="20" class="range" id="range1">
-                            <input type="range" min="0" max="100" value="80" class="range" id="range2">
                             <input type="range" min="0" max="100" value="50" class="range" id="range3">
                         </div>
                         <div class="range-display">
                             <span class="range-value" id="range1-display"></span>
-                            <span class="range-value" id="range2-display"></span>
                             <span class="range-value" id="range3-display"></span>
                         </div>
                     </div>
@@ -120,7 +118,10 @@
             </div>
             <div class="container-dropdown">
                 <div class="dropdown scheme-dr">
-                    <button class="dropdown-button ">Color Scheme</button>
+                    <button class="dropdown-button "><span>Color Scheme</span>
+                        <span class="btnArr"><i class="fa-solid fa-chevron-right"></i></span>
+                    </button>
+                    
                     <div class="dropdown-content">
                         <label class="radio-button"  for="fl-1">Roses</label>
                         <input type="radio" name="color-scheme"  id="fl-1" value="roses">
@@ -143,7 +144,10 @@
                 </div>
 
                 <div class="dropdown size-dr">
-                    <button class="dropdown-button ">Size</button>
+                    <button class="dropdown-button "><span>Sizes</span>
+                        <span class="btnArr"><i class="fa-solid fa-chevron-right"></i></span>
+                    </button>
+                    
                     <div class="dropdown-content">
                         <label class="radio-button" for="size1">S</label>
                         <input type="radio" name="size" id="size1" value="S">
@@ -161,7 +165,7 @@
         </div>
         <div class="items-bouquet">
             <div class="bouquet-cards">
-
+                
             </div>
             <div class="bouquet-btns">
                 <button id="prev" class="prev-bouquet">
