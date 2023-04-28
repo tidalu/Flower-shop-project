@@ -453,3 +453,33 @@ categories.addEventListener("click", function (e) {
 // });
 
 
+
+// video add start
+const btnVideo = document.querySelector('.btnVideo');
+const arrowBtn = document.querySelector('#arrow');
+const learnMore = document.querySelector('.learnMore');
+btnVideo.addEventListener("click", function () {
+    arrowBtn.classList.toggle("rotate");
+    if(learnMore.classList.contains("hidden")){
+        learnMore.classList.remove("hidden");
+    }else{
+        learnMore.classList.add("hidden");
+    }
+})
+// video play
+const videoContainer = document.querySelector('.video-container');
+const play = document.querySelector('.play');
+const video = document.querySelector('video');
+
+videoContainer.addEventListener("click", function () {
+    play.classList.toggle("hidden");
+    if(play.classList.contains("hidden")){
+        play.classList.remove("hidden");
+        video.pause();
+    }else{
+        play.classList.add("hidden");
+        video.play();
+    }
+
+})
+// video add end
