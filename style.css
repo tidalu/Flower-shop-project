@@ -392,6 +392,9 @@ input[type=number] {
     flex-direction: column;
     padding: 10px;
     gap: 10px;
+    background: rgba(215, 39, 189, 0.374);
+    border-radius: 10px;
+
 }
 
 .filter .list {
@@ -399,6 +402,7 @@ input[type=number] {
     flex-direction: column;
     gap: 10px;
     font-size: 14px;
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -427,6 +431,7 @@ input[type=number] {
 .items-bouquet {
     flex-basis: 69%;
     height: 105vh;
+    border-radius: 10px;
     /* background-color: rgba(23, 148, 23, 0.5); */
 }
 
@@ -590,10 +595,12 @@ input[type=number] {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 50px;
     height: 100%;
 }
 .bouquet-cards {
-    flex-basis: 90%;
+    flex-basis: 100%;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -654,6 +661,7 @@ input[type=number] {
 }
 
 .bouquet-btns{
+    visibility: hidden;
     flex-basis: 10%;
     display: flex;
     justify-content: center;
@@ -672,8 +680,27 @@ input[type=number] {
     align-items: center;
     cursor: pointer;
     gap: 10px;
+    z-index: 1000;
 
 }
+#like-counter {
+    display: none;
+}
+
+.color {
+    color: red;
+}
+
+#heart {
+    /* color: red; */
+}
+
+.shopping {
+    color: rgb(68, 253, 0);
+}
+
+
+
 
 /* item bouquet section end */
 
