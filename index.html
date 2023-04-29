@@ -181,7 +181,7 @@
         </div>
     </div>
     <!-- bouquet catalog end  -->
-    <!-- video add start -->
+    <!-- video add start
     <div class="video">
         <div class="video-info">
             <h2 class="video-title">Online store "Malliflow"</h2>
@@ -202,17 +202,130 @@
         </div>
         <div class="video-container">
             <!-- play button here-->
-            <div class="play">
+    <!-- <div class="play">
                 <i class="fa-solid fa-play playBtn"></i>
             </div>
             <video width="500" height="300">
                 <source src="/videos/video.mp4" type="video/mp4">
             </video>
         </div>
-    </div>
+    </div>  -->
     <!-- video add end -->
-    <!-- script -->
-    <script src="app.js"></script>
+
+
+    <!-- Payment page start -->
+    <div class="payment-container">
+        <div class="order-created-info">
+            <!-- close icon -->
+            <div class="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <!-- <h3 class="order-created">Your order No<span id="order-number">######</span> dated <span id="order-date">29/04/2023</span>
+                <span id="order-time">26:88</span> has been successfully created</h3>
+            -->
+            <div class="payment-card-add">
+                <div class="online-payments">
+                    <div class="apple-pay">
+                        <h2 class="apple-pay-title">Apple Pay</h2>
+                        <p class="apple-pay-info">Fast payment in the Apple pay app</p>
+                        <button class="apple-pay-button"><i class="fab fa-apple-pay"></i></button>
+                    </div>
+                    <div class=" apple-pay google-pay">
+                        <h2 class="apple-pay-title">Google Pay</h2>
+                        <p class="apple-pay-info">Fast payment in the Google pay app</p>
+                        <button class="apple-pay-button"><i class="fa-brands fa-google-pay"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="seperator">
+                    <div class="hor-line"></div>
+                    <p>or pay using credit card</p>
+                    <div class="hor-line"></div>
+                </div>
+
+                <div class="by-card">
+                    <h2 class="by-card-title">By card</h2>
+                    <div class="input-container">
+                        <label class="label-input" for="name-field">Card holder full name</label>
+                        <!-- input full name -->
+                        <input type="text" id="name-field" title="input title" class="input-field" name="input-name"
+                            placeholder="Enter your full name">
+                    </div>
+                    <div class="input-container">
+                        <label for="number-field" class="label-input">Card Number</label>
+                        <!-- input card number -->
+                        <input type="number" id="number-field" pattern="/^\d{16}$/" title="input card number"
+                            class="input-field" name="input-number" placeholder="0000 0000 0000 0000">
+                    </div>
+                    <div class="input-container">
+                        <label for="info-field" class="label-input">Expiry Date/CVV</label>
+                        <!-- input card info -->
+                        <div class="input-number">
+                            <input type="number" id="expiration-date-field" title="input expiration date"
+                                class="input-field" name="expiration-date" pattern="^(0[1-9]|1[0-2])\/\d{2}$"
+                                placeholder="02/23">
+
+                            <input type="number" maxlength="3" id="cvv-field" title="input cvv" class="input-field"
+                                pattern="^\d{3}$" name="cvv" placeholder="###">
+
+                        </div>
+                        <div class="to-pay">
+                            <!-- button to pay -->
+                            <button class="pay-btn">Pay</button>
+                        </div>
+
+                        <div class="consent-and-icon">
+                            <div class="consent">*by clicking on the button you consent to the processing of personal
+                                data </div>
+                            <div class="pop-icons">
+                                <!-- apple pay icon -->
+                                <i class="fa-brands fa-apple-pay"></i>
+                                <!-- visa icon -->
+                                <i class="fa-brands fa-cc-visa"></i>
+                                <!-- google pay icon -->
+                                <i class="fa-brands fa-google-pay"></i>
+                                <!-- master card icon -->
+                                <i class="fa-brands fa-cc-mastercard"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="your-order">
+                <h3 id="title">Your order</h3>
+                <div class="final-checkout-cart">
+                    <div class="final-checkout-order">
+                        <div class="image-order">
+                            <img src="/images/bouquet/bouquet-18.jpg" alt="image">
+                        </div>
+                        <div class="checkout-info">
+                            <h4>Bouquet 'Joy'</h4>
+                            <p>Bouquet of beautiful roses and dianthus</p>
+
+                            <h4>Price: <span id="cost-checkout">30 USD</span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="successfully payment-container">
+            <div class="successfully-info">
+                    <h2>Payment processed Successfully</h2> 
+                    <div class="confirm-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <p>Your order has been successfully placed. We will contact you as soon as possible. Your order #<span id="order-number">####</span>. Thanks for the purchase!</p>  
+
+                    <button class="backtohome">
+                        Back to store
+                    </button>
+            </div>
+        </div>
+        <!-- Payment page end -->
+        <!-- script -->
+        <script src="app.js"></script>
 </body>
 
 </html>

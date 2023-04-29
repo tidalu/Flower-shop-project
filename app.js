@@ -1,82 +1,3 @@
-const circles = document.querySelectorAll('.circles');
-const services = document.querySelector('.services');
-let counter = 0;
-document.querySelector('#prev').addEventListener('click', function () {
-    counter--;
-    if (counter < 0) {
-        counter = 2;
-    }
-    services.children[counter].scrollIntoView({ behavior: 'smooth', block: "nearest" });
-    updateActive();
-})
-
-document.querySelector('#next').addEventListener('click', function () {
-    counter++;
-    if (counter > 2) {
-        counter = 0;
-    }
-    services.children[counter].scrollIntoView({ behavior: 'smooth', block: "nearest" });
-    updateActive();
-})
-
-function updateActive() {
-    circles.forEach((circle, idx) => {
-        if (idx === counter) {
-            circle.classList.add("active");
-        } else {
-            circle.classList.remove("active");
-        }
-    });
-};
-
-
-// filter prices
-
-const rangeSlider = document.querySelector('.range-slider');
-const rangeValues = document.querySelectorAll('.range-value');
-
-const range1 = document.querySelector('#range1');
-const range3 = document.querySelector('#range3');
-
-rangeSlider.addEventListener('input', () => {
-    rangeValues.forEach((rangeValue, index) => {
-        if (range1.value >= range3.value) {
-            rangeValue.innerHTML = range3.value + '$';
-        } else {
-            rangeValue.innerHTML = rangeSlider.children[index].value + '$';
-        }
-    });
-
-});
-
-
-
-
-
-// dropdown menu 
-const dropdowns = document.querySelectorAll('.dropdown');
-
-dropdowns.forEach((dropdown) => {
-    const dropdownButton = dropdown.querySelector('.dropdown-button');
-    const dropdownContent = dropdown.querySelector('.dropdown-content');
-    const radioButtons = dropdown.querySelectorAll('input[type="radio"]');
-
-    dropdownButton.addEventListener('click', (e) => {
-        dropdownContent.classList.toggle('show');
-        dropdownButton.children[1].classList.toggle('rotate');
-
-    });
-
-
-
-    radioButtons.forEach((radioButton) => {
-        radioButton.addEventListener('click', () => {
-            dropdownButton.children[0].innerHTML = radioButton.value.charAt(0).toUpperCase() + radioButton.value.slice(1);
-            // dropdownContent.classList.remove('show');`
-        });
-    });
-});
-
 const menu = [
     {
         id: 1,
@@ -322,7 +243,84 @@ const menu = [
         size: "XL",
     },
 ];
+const circles = document.querySelectorAll('.circles');
+const services = document.querySelector('.services');
+let counter = 0;
+document.querySelector('#prev').addEventListener('click', function () {
+    counter--;
+    if (counter < 0) {
+        counter = 2;
+    }
+    services.children[counter].scrollIntoView({ behavior: 'smooth', block: "nearest" });
+    updateActive();
+})
 
+document.querySelector('#next').addEventListener('click', function () {
+    counter++;
+    if (counter > 2) {
+        counter = 0;
+    }
+    services.children[counter].scrollIntoView({ behavior: 'smooth', block: "nearest" });
+    updateActive();
+})
+
+function updateActive() {
+    circles.forEach((circle, idx) => {
+        if (idx === counter) {
+            circle.classList.add("active");
+        } else {
+            circle.classList.remove("active");
+        }
+    });
+};
+
+
+// filter prices
+
+const rangeSlider = document.querySelector('.range-slider');
+const rangeValues = document.querySelectorAll('.range-value');
+
+const range1 = document.querySelector('#range1');
+const range3 = document.querySelector('#range3');
+
+rangeSlider.addEventListener('input', () => {
+    rangeValues.forEach((rangeValue, index) => {
+        if (range1.value >= range3.value) {
+            rangeValue.innerHTML = range3.value + '$';
+        } else {
+            rangeValue.innerHTML = rangeSlider.children[index].value + '$';
+        }
+    });
+
+});
+
+
+
+
+
+// dropdown menu 
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach((dropdown) => {
+    const dropdownButton = dropdown.querySelector('.dropdown-button');
+    const dropdownContent = dropdown.querySelector('.dropdown-content');
+    const radioButtons = dropdown.querySelectorAll('input[type="radio"]');
+
+    dropdownButton.addEventListener('click', (e) => {
+        dropdownContent.classList.toggle('show');
+        dropdownButton.children[1].classList.toggle('rotate');
+
+    });
+
+
+
+    radioButtons.forEach((radioButton) => {
+        radioButton.addEventListener('click', () => {
+            dropdownButton.children[0].innerHTML = radioButton.value.charAt(0).toUpperCase() + radioButton.value.slice(1);
+            // dropdownContent.classList.remove('show');`
+        });
+    });
+});
 
 window.addEventListener("DOMContentLoaded", function () {
     const bouquetCards = document.querySelector('.bouquet-cards');
@@ -351,6 +349,12 @@ window.addEventListener("DOMContentLoaded", function () {
     displayMenu = displayMenu.join("");
     bouquetCards.innerHTML += displayMenu;
 
+    const cartt = document.querySelectorAll('.bouquet-card');
+    cartt.forEach(function (cart) {
+        cart.addEventListener("click", function () {
+            console.log(cart);
+        })
+    })
     const hearts = document.querySelectorAll('.fa-heart');
     hearts.forEach(function (heart) {
         const cartIcon = heart.parentElement;
@@ -454,32 +458,61 @@ categories.addEventListener("click", function (e) {
 
 
 
-// video add start
-const btnVideo = document.querySelector('.btnVideo');
-const arrowBtn = document.querySelector('#arrow');
-const learnMore = document.querySelector('.learnMore');
-btnVideo.addEventListener("click", function () {
-    arrowBtn.classList.toggle("rotate");
-    if(learnMore.classList.contains("hidden")){
-        learnMore.classList.remove("hidden");
-    }else{
-        learnMore.classList.add("hidden");
-    }
-})
-// video play
-const videoContainer = document.querySelector('.video-container');
-const play = document.querySelector('.play');
-const video = document.querySelector('video');
+// // video add start
+// const btnVideo = document.querySelector('.btnVideo');
+// const arrowBtn = document.querySelector('#arrow');
+// const learnMore = document.querySelector('.learnMore');
+// btnVideo.addEventListener("click", function () {
+//     arrowBtn.classList.toggle("rotate");
+//     if(learnMore.classList.contains("hidden")){
+//         learnMore.classList.remove("hidden");
+//     }else{
+//         learnMore.classList.add("hidden");
+//     }
+// })
+// // video play
+// const videoContainer = document.querySelector('.video-container');
+// const play = document.querySelector('.play');
+// const video = document.querySelector('video');
 
-videoContainer.addEventListener("click", function () {
-    play.classList.toggle("hidden");
-    if(play.classList.contains("hidden")){
-        play.classList.remove("hidden");
-        video.pause();
-    }else{
-        play.classList.add("hidden");
-        video.play();
-    }
+// videoContainer.addEventListener("click", function () {
+//     play.classList.toggle("hidden");
+//     if(play.classList.contains("hidden")){
+//         play.classList.remove("hidden");
+//         video.pause();
+//     }else{
+//         play.classList.add("hidden");
+//         video.play();
+//     }
 
+// })
+// // video add end
+
+
+// close card popup
+
+const paymentContainer = document.querySelector('.payment-container');
+const closeBtn = document.querySelector('.close-btn');
+
+closeBtn.addEventListener("click", function () {
+    paymentContainer.classList.add("hidden");
+    closeBtn.classList.add('rotate');
+    console.log(paymentContainer);
 })
-// video add end
+
+//date time for order payment
+
+// date 
+const orderDate = document.querySelector('#order-date');
+const orderTime = document.querySelector('#order-time');
+const orderNumber = document.querySelector('#order-number');
+
+let date = new Date();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+let hours = date.getHours();
+let minutes = date.getMinutes();
+
+orderDate.textContent = `${day}/${month}/${year}`;
+orderTime.textContent = `${hours}:${minutes}`;
