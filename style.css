@@ -1178,3 +1178,202 @@ p.apple-pay-info {
 .backtohome:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
+
+
+/* contacts page */
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    
+}
+.contact h2 {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+}
+.contacts-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    height: 300px;
+    flex-basis: 30%;
+    line-height: 1.5em;
+    padding: 20px;
+}
+.soc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: start;
+    font-size: 20px;
+
+}
+
+
+.map {
+    flex-basis: 70%;
+    width: 100%;
+    transform: translateY(2px);
+}
+
+
+/* contacts page end */
+
+
+
+
+/* footer */
+.footer-container {
+    height: 47vh;
+    margin-top: 30px;
+    background-color: rgba(198, 56, 220, 0.3);
+}
+.footer-links {
+    width: 90%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0 auto;
+
+}
+.logo-link
+{
+    padding: 10px;
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.logo-link img {
+    width: 70%;
+    align-self: start;
+    justify-self: start;
+    transform: translateX(-65px);
+
+}
+.med {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.med i {
+    font-size: 20px;
+}
+
+.timework {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+
+
+}
+.timework p {
+    font-size: 12px;
+    margin-top: -5px;
+    opacity: 0.5;
+} 
+.address {
+    font-size: 14px;
+}
+
+
+.hr-line {
+    width: 90%;
+    margin: 20px auto 10px auto;
+    height: 1px;
+    background-color: rgba(229, 32, 199, 0.502);
+}
+
+
+.footer-priv-lang {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.priv, 
+.lang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#eng, #fr{
+    cursor: pointer;
+}
+.information, 
+.catalog-link {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 15px;
+    flex-direction: column;
+    flex-basis: 30%;
+}
+.information ul, 
+.catalog-link  ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.information ul li a, 
+.catalog-link  ul li a{
+    list-style: none;
+    color: white;
+    opacity: 0.5;
+
+}
+
+.newsteller {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    flex-basis: 30%;
+
+}
+.newsteller h3 {
+    font-size: 23px;
+}
+.newsteller input {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+.newsteller button {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+.newsteller button:hover {
+    opacity: calc(1 - 0.2);
+    cursor: pointer;
+}
+.newsteller p {
+    font-size: 12px;
+}
+/* footer end */
